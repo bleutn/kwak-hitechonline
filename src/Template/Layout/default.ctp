@@ -57,10 +57,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <footer>
         </footer>
     </div>
-
     <?= $this->Html->script('plugins/jQuery/jQuery-2.1.4.min.js') ?>
     <?= $this->Html->script('bootstrap/js/bootstrap.js') ?>
-
 
 </body>
 </html>
