@@ -34,6 +34,7 @@ class PagesController extends AppController
      * @return void|\Cake\Network\Response
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
+     *
      */
     public function display()
     {
@@ -41,7 +42,7 @@ class PagesController extends AppController
 
         $count = count($path);
         if (!$count) {
-            return $this->redirect('/');
+            return $this->redirect('/index.html');
         }
         $page = $subpage = null;
 

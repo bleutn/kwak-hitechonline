@@ -1,3 +1,7 @@
+<head>
+  <?= $this->Html->css('bootstrap/css/bootstrap.css') ?>/head>
+<body>
+
 
     <div class="wrapper">
 
