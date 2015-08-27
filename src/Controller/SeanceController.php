@@ -38,6 +38,11 @@ class SeanceController extends AppController
         $this->set('_serialize', ['seance']);
     }
 
+    public function display()
+    {
+        $this->redirect('/Seance');
+    }
+
     /**
      * Add method
      *
@@ -58,6 +63,15 @@ class SeanceController extends AppController
         $produit = $this->Seance->Produit->find('list', ['limit' => 200]);
         $this->set(compact('seance', 'produit'));
         $this->set('_serialize', ['seance']);
+
+        $produits_intitule = array();
+        $produits_id = $produit->toArray();
+        foreach ($produits_id as $produit_id)
+        {
+            $new_produit = $this->Seance->Produit->get($produit_id);
+            $produits_intitule[$produit_id] = $new_produit->intitule;
+        }
+        $this->set('produits_intitule', $produits_intitule);
     }
 
     /**
@@ -84,6 +98,15 @@ class SeanceController extends AppController
         $produit = $this->Seance->Produit->find('list', ['limit' => 200]);
         $this->set(compact('seance', 'produit'));
         $this->set('_serialize', ['seance']);
+
+        $produits_intitule = array();
+        $produits_id = $produit->toArray();
+        foreach ($produits_id as $produit_id)
+        {
+            $new_produit = $this->Seance->Produit->get($produit_id);
+            $produits_intitule[$produit_id] = $new_produit->intitule;
+        }
+        $this->set('produits_intitule', $produits_intitule);
     }
 
     /**

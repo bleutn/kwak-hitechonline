@@ -30,10 +30,12 @@ class ProduitTable extends Table
         $this->primaryKey('id');
 
         $this->belongsToMany('Seance', [
-            'foreignKey' => 'produit_id',
-            'targetForeignKey' => 'seance_id',
+            'foreignKey' => 'id_produit',
+            'targetForeignKey' => 'id_seance',
             'joinTable' => 'seance_produit'
         ]);
+
+        $this->hasOne('Categorie');
     }
 
     /**
@@ -71,10 +73,10 @@ class ProduitTable extends Table
             ->requirePresence('quantite', 'create')
             ->notEmpty('quantite');
 
-        $validator
-            ->add('nb_vendu', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('nb_vendu', 'create')
-            ->notEmpty('nb_vendu');
+        //$validator
+            //->add('nb_vendu', 'valid', ['rule' => 'numeric'])
+            //->requirePresence('nb_vendu', 'create')
+            //->notEmpty('nb_vendu');
 
         return $validator;
     }

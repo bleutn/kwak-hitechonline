@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\Categorie;
 
 /**
  * Produit Controller
@@ -58,6 +59,19 @@ class ProduitController extends AppController
         $seance = $this->Produit->Seance->find('list', ['limit' => 200]);
         $this->set(compact('produit', 'seance'));
         $this->set('_serialize', ['produit']);
+
+        $categorie = $this->Produit->Categorie->find('list', ['limit' => 5]);
+        $this->set(compact('produit', 'categorie'));
+        $this->set('_serialize', ['produit']);
+
+        $categories_intitule = array();
+        $categories_id = $categorie->toArray();
+        foreach ($categories_id as $categorie_id)
+        {
+            $new_categorie = $this->Produit->Categorie->get($categorie_id);
+            $categories_intitule[$categorie_id] = $new_categorie->intitule;
+        }
+        $this->set('categories_intitule', $categories_intitule);
     }
 
     /**
@@ -84,6 +98,19 @@ class ProduitController extends AppController
         $seance = $this->Produit->Seance->find('list', ['limit' => 200]);
         $this->set(compact('produit', 'seance'));
         $this->set('_serialize', ['produit']);
+
+        $categorie = $this->Produit->Categorie->find('list', ['limit' => 5]);
+        $this->set(compact('produit', 'categorie'));
+        $this->set('_serialize', ['produit']);
+
+        $categories_intitule = array();
+        $categories_id = $categorie->toArray();
+        foreach ($categories_id as $categorie_id)
+        {
+            $new_categorie = $this->Produit->Categorie->get($categorie_id);
+            $categories_intitule[$categorie_id] = $new_categorie->intitule;
+        }
+        $this->set('categories_intitule', $categories_intitule);
     }
 
     /**

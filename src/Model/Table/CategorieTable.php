@@ -28,6 +28,7 @@ class CategorieTable extends Table
         $this->displayField('id');
         $this->primaryKey('id');
 
+        //$this->belongsToMany('Produit');
     }
 
     /**

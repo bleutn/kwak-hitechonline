@@ -30,8 +30,8 @@ class SeanceTable extends Table
         $this->primaryKey('id');
 
         $this->belongsToMany('Produit', [
-            'foreignKey' => 'seance_id',
-            'targetForeignKey' => 'produit_id',
+            'foreignKey' => 'id_seance',
+            'targetForeignKey' => 'id_produit',
             'joinTable' => 'seance_produit'
         ]);
     }

@@ -31,18 +31,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <?= $this->Html->css('bootstrap.min.css') ?>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <?= $this->Html->css('jquery-jvectormap-1.2.2.css') ?>
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <?= $this->Html->css('AdminLTE.min.css') ?>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <?= $this->Html->css('_all-skins.min.css') ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,7 +50,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -62,7 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="index2.html" class="logo">
+            <a href="/" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>A</b>LT</span>
                 <!-- logo for regular state and mobile devices -->
@@ -92,7 +91,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                    <?= $this->Html->image('user2-160x160.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -104,7 +103,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <?= $this->Html->image('user3-128x128.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -116,7 +115,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <?= $this->Html->image('user4-128x128.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -128,7 +127,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <?= $this->Html->image('user3-128x128.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -140,7 +139,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <?= $this->Html->image('user4-128x128.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -268,13 +267,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <?= $this->Html->image('user2-160x160.jpg', ['class' => 'user-image'], ['alt' => 'User Image']) ?>
                                 <span class="hidden-xs">Alexander Pierce</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <?= $this->Html->image('user2-160x160.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                                     <p>
                                         Alexander Pierce - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -319,7 +318,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <?= $this->Html->image('user2-160x160.jpg', ['class' => 'img-circle'], ['alt' => 'User Image']) ?>
                     </div>
                     <div class="pull-left info">
                         <p>Alexander Pierce</p>
@@ -542,25 +541,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </footer>
     </div>
     <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <?= $this->Html->script('jQuery-2.1.4.min.js') ?>
     <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <?= $this->Html->script('bootstrap.min.js') ?>
     <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <?= $this->Html->script('fastclick.min.js') ?>
     <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
+    <?= $this->Html->script('app.min.js') ?>
     <!-- Sparkline -->
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+    <?= $this->Html->script('jquery.sparkline.min.js') ?>
     <!-- jvectormap -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <?= $this->Html->script('jquery-jvectormap-1.2.2.min.js') ?>
+    <?= $this->Html->script('jquery-jvectormap-world-mill-en.js') ?>
     <!-- SlimScroll 1.3.0 -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <?= $this->Html->script('jquery.slimscroll.min.js') ?>
     <!-- ChartJS 1.0.1 -->
-    <script src="plugins/chartjs/Chart.min.js"></script>
+    <?= $this->Html->script('Chart.min.js') ?>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard2.js"></script>
+    <?= $this->Html->script('dashboard2.js') ?>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <?= $this->Html->script('demo.js') ?>
 </body>
 </html>

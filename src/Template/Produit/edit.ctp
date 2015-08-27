@@ -18,12 +18,11 @@
         <legend><?= __('Edit Produit') ?></legend>
         <?php
             echo $this->Form->input('id_categorie');
+            echo $this->Form->select('id_categorie', $categories_intitule, ['size' => 10]);
             echo $this->Form->input('intitule');
             echo $this->Form->input('description');
             echo $this->Form->input('prix');
             echo $this->Form->input('quantite');
-            echo $this->Form->input('nb_vendu');
-            echo $this->Form->input('seance._ids', ['options' => $seance]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

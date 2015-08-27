@@ -1,4 +1,3 @@
-<div class="wrapper">
     <div class="actions columns large-2 medium-3">
         <h3><?= __('Actions') ?></h3>
         <ul class="side-nav">
@@ -46,5 +45,4 @@
             <p><?= $this->Paginator->counter() ?></p>
         </div>
     </div>
-</div>
 
